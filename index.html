@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>EasyG – Review &amp; giới thiệu games | Tìm game đáng chơi</title>
+  <meta name="description" content="EasyG – website review và giới thiệu games: tìm kiếm, lọc theo hãng, xem cấu hình, hình ảnh và đọc review từ cộng đồng.">
+  <meta name="theme-color" content="#e60012">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="home">
+  <div id="app-header"></div>
+  <main id="main">
+    <section class="hero">
+      <div class="hero__deco" aria-hidden="true">
+        <span class="hero__word">PLAY</span>
+        <div class="pad pad--1"><span>X</span><span>Y</span><span>A</span><span>B</span></div>
+        <div class="pad pad--2"><span>X</span><span>Y</span><span>A</span><span>B</span></div>
+        <i class="shape shape--ring"></i><i class="shape shape--tri"></i><i class="shape shape--sq"></i><i class="shape shape--cross"></i>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="kicker">★ Review thật · Dễ chọn · Dễ chơi</span>
+          <h1>Tìm game <mark>đáng chơi</mark> chỉ trong vài giây!</h1>
+          <p class="hero__lead">EasyG tập hợp thông tin, cấu hình, hình ảnh và review của những tựa game hot nhất – để bạn chọn đúng game hợp gu trước khi bấm “Chơi”.</p>
+          <form class="hero-search" action="games.html" method="get" role="search">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="search" name="q" placeholder="Tìm game…" autocomplete="off" aria-label="Tìm game">
+            <button class="btn btn-primary" type="submit">Tìm ngay</button>
+          </form>
+          <div class="hero__cta">
+            <a class="btn btn-yellow" href="games.html">Khám phá games</a>
+            <a class="btn btn-outline-light" href="developers.html">Nhà phát triển</a>
+          </div>
+          <div class="hero__chips" id="heroChips"></div>
+        </div>
+        <div class="hero__stack" id="heroStack" aria-label="Games nổi bật"></div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V40C120 0 240 0 360 24s240 48 360 32 240-56 360-48 240 40 360 56V80z"/></svg>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+    <section class="section" id="devs">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div><span class="eyebrow">Hãng nổi bật</span><h2>Những <mark>cái tên</mark> làm nên game hay</h2></div>
+          <a class="link-more" href="developers.html">Xem tất cả hãng <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="grid-devs" id="homeDevs"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="featured">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div><span class="eyebrow eyebrow--yellow">Điểm cao nhất</span><h2>Games <mark>nổi bật</mark> được chấm điểm cao</h2>
+          <p>Điểm EasyG được tính từ trung bình các đánh giá của người dùng.</p></div>
+          <a class="link-more" href="games.html">Xem thư viện games <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="grid-games" id="homeGames"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sec-head reveal"><div><span class="eyebrow eyebrow--blue">Vì sao chọn EasyG</span><h2>Mọi thứ bạn cần, <mark>gọn trong một chỗ</mark></h2></div></div>
+        <div class="features">
+          <article class="feature feature--red reveal"><div class="feature__ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Tìm kiếm tức thì</h3><p>Gõ tên game, kết quả hiện ngay – kể cả khi bạn quên gõ dấu tiếng Việt.</p></article>
+          <article class="feature feature--blue reveal" style="--d:80ms"><div class="feature__ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></div><h3>Lọc theo hãng</h3><p>Thu gọn danh sách theo hãng phát triển, phát hành và thể loại chỉ với một cú chạm.</p></article>
+          <article class="feature feature--green reveal" style="--d:160ms"><div class="feature__ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div><h3>Cấu hình rõ ràng</h3><p>Biết ngay máy mình chơi được hay không nhờ bảng cấu hình tóm gọn từng game.</p></article>
+          <article class="feature feature--purple reveal" style="--d:240ms"><div class="feature__ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-5.5A8 8 0 1 1 21 12z"/></svg></div><h3>Review từ cộng đồng</h3><p>Đọc cảm nhận thật của người chơi và để lại điểm số, review của riêng bạn.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="latest">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div><span class="eyebrow">Mới nhất</span><h2>Review <mark>vừa lên sóng</mark></h2></div>
+          <a class="link-more" href="games.html">Chọn game để review <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="grid-reviews" id="homeReviews"></div>
+      </div>
+    </section>
+
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal"><b data-count="games">0</b><span>Games</span></div>
+          <div class="stat reveal" style="--d:80ms"><b data-count="devs">0</b><span>Nhà phát triển</span></div>
+          <div class="stat reveal" style="--d:160ms"><b data-count="reviews">0</b><span>Review</span></div>
+          <div class="stat reveal" style="--d:240ms"><b data-count="users">0</b><span>Người dùng</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal" id="ctaBand"></div>
+      </div>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

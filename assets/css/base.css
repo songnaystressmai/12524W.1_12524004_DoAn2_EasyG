@@ -1,0 +1,118 @@
+/* ==========================================================
+   EasyG – base.css
+   Biến thiết kế, reset, kiểu chữ, hoạt ảnh dùng chung
+   ========================================================== */
+:root {
+  /* Màu thương hiệu: đỏ rực + các màu "nút bấm" tay cầm game */
+  --red: #e60012;
+  --red-d: #b3000e;
+  --red-dd: #7d000a;
+  --red-l: #ff4d5a;
+  --red-soft: #ffe9eb;
+  --ink: #16161d;
+  --ink-2: #44444f;
+  --muted: #7a7a88;
+  --line: #e9e9ef;
+  --bg: #ffffff;
+  --bg-soft: #f6f6fa;
+  --yellow: #ffd400;
+  --yellow-d: #e0b400;
+  --blue: #00a5e3;
+  --green: #00b25a;
+  --pink: #ff6fb1;
+  --purple: #7a5cff;
+
+  --r-xl: 32px;
+  --r-lg: 24px;
+  --r-md: 16px;
+  --r-sm: 10px;
+
+  --sh-sm: 0 4px 14px rgba(22, 22, 29, .08);
+  --sh-md: 0 12px 32px rgba(22, 22, 29, .13);
+  --sh-lg: 0 28px 60px rgba(22, 22, 29, .20);
+  --sh-red: 0 18px 40px rgba(230, 0, 18, .30);
+
+  --f-display: "Baloo 2", "Fredoka", "Nunito", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --gutter: clamp(16px, 4vw, 36px);
+  --container: 1240px;
+  --header-h: 76px;
+
+  --ease: cubic-bezier(.22, .8, .24, 1);
+  --bounce: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: clip; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+body {
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  animation: pageIn .6s var(--ease) both;
+}
+body.no-scroll { overflow: hidden; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 800; line-height: 1.1; letter-spacing: -.01em; }
+p { text-wrap: pretty; }
+::selection { background: var(--red); color: #fff; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 8px; }
+[hidden] { display: none !important; }
+
+.container { width: min(100% - 2 * var(--gutter), var(--container)); margin-inline: auto; }
+.icon { width: 1.15em; height: 1.15em; flex: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Placeholder khi chưa có ảnh ---------- */
+.ph {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, hsl(var(--h) 85% 58%), hsl(calc(var(--h) + 38) 78% 40%));
+}
+.ph::before {
+  content: attr(data-initial);
+  font-family: var(--f-display); font-weight: 800; line-height: 1;
+  font-size: clamp(2.8rem, 9vw, 5.5rem);
+  color: rgba(255, 255, 255, .92);
+  text-shadow: 0 6px 0 rgba(0, 0, 0, .14);
+  z-index: 0;
+}
+.ph::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; opacity: .35;
+  background-image: radial-gradient(rgba(255, 255, 255, .55) 1.5px, transparent 1.6px);
+  background-size: 18px 18px;
+}
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+/* ---------- Hoạt ảnh ---------- */
+@keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); } 50% { transform: translateY(-16px) rotate(var(--rot, 0deg)); } }
+@keyframes floatSlow { 0%, 100% { transform: translate(0, 0) rotate(0); } 50% { transform: translate(10px, -22px) rotate(12deg); } }
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes popIn { from { opacity: 0; transform: scale(.85) translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes wiggle { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(230, 0, 18, .45); } 50% { box-shadow: 0 0 0 14px rgba(230, 0, 18, 0); } }
+@keyframes shine { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(220%) skewX(-18deg); } }
+
+/* Hiệu ứng hiện dần khi cuộn (chỉ bật khi có JS) */
+.js .reveal {
+  opacity: 0; translate: 0 32px;
+  transition: opacity .7s var(--ease), translate .7s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+.js .reveal.in { opacity: 1; translate: 0 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; translate: 0 0; }
+}

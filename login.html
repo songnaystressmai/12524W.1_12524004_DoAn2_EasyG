@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Đăng nhập – EasyG</title>
+  <meta name="description" content="Đăng nhập EasyG để viết đánh giá hoặc truy cập trang quản trị.">
+  <meta name="theme-color" content="#e60012">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="login">
+  <div id="app-header"></div>
+  <main id="main" class="auth">
+    <section class="auth__art" aria-hidden="false">
+      <div aria-hidden="true">
+        <div class="pad"><span>X</span><span>Y</span><span>A</span><span>B</span></div>
+        <i class="shape shape--ring"></i><i class="shape shape--tri"></i>
+      </div>
+      <span class="kicker" style="width:fit-content">★ Chào mừng trở lại</span>
+      <h1 style="margin-top:1rem">Sẵn sàng <br>chơi tiếp chưa?</h1>
+      <p>Đăng nhập để chấm điểm, viết review và chia sẻ cảm nhận về những tựa game bạn yêu thích.</p>
+    </section>
+    <section class="auth__main">
+      <div class="auth__card">
+        <h2>Đăng nhập</h2>
+        <p>Nhập tài khoản của bạn để tiếp tục.</p>
+        <div class="alert alert--info" id="loginNote" hidden></div>
+        <form id="loginForm" novalidate style="margin-top:1rem">
+          <div class="field"><label for="lUser">Tên đăng nhập</label>
+            <div class="input-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+            <input class="input" id="lUser" name="username" autocomplete="username" placeholder="Ví dụ: admin"></div><span class="field-error"></span></div>
+          <div class="field"><label for="lPass">Mật khẩu</label>
+            <div class="input-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <input class="input" id="lPass" name="password" type="password" autocomplete="current-password" placeholder="••••••••">
+            <button class="toggle-eye" type="button" id="togglePass" aria-label="Hiện / ẩn mật khẩu"></button></div><span class="field-error"></span></div>
+          <div class="alert alert--error" id="loginErr" hidden></div>
+          <button class="btn btn-primary btn-block" type="submit">Đăng nhập</button>
+        </form>
+        <div class="quick"><small>Tài khoản dùng thử (bấm để điền nhanh)</small>
+          <div class="quick__row">
+            <button class="btn btn-ghost btn-sm" type="button" data-fill="admin|123">Admin</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-fill="user|123">Người dùng</button>
+          </div></div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

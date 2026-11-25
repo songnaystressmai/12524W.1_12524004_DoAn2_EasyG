@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thư viện games – EasyG</title>
+  <meta name="description" content="Tìm kiếm và lọc games theo tên, hãng và thể loại trên EasyG.">
+  <meta name="theme-color" content="#e60012">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="games">
+  <div id="app-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__deco" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Trang chủ</a><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg><span>Games</span></nav>
+        <h1>Thư viện games</h1>
+        <p>Tìm theo tên, lọc theo hãng và thể loại – mọi game đều có điểm số, cấu hình và review.</p>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V40C120 0 240 0 360 24s240 48 360 32 240-56 360-48 240 40 360 56V80z"/></svg>
+    </section>
+
+    <div class="container">
+      <section class="toolbar" aria-label="Bộ lọc games">
+        <div class="toolbar__row">
+          <div class="field"><label for="fQ">Tìm theo tên</label>
+            <div class="input-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input class="input" id="fQ" type="search" placeholder="Ví dụ: zelda, mario, free fire…" autocomplete="off"></div></div>
+          <div class="field"><label for="fGenre">Thể loại</label><select class="select" id="fGenre"><option value="">Tất cả thể loại</option></select></div>
+          <div class="field"><label for="fSort">Sắp xếp</label>
+            <select class="select" id="fSort"><option value="diem">Điểm cao nhất</option><option value="moi">Mới phát hành</option><option value="ten">Tên A → Z</option></select></div>
+          <button class="btn btn-ghost" id="fClear" type="button">Xóa lọc</button>
+        </div>
+        <div><span class="field-label">Lọc theo hãng</span><div class="chips" id="fDevs" role="group" aria-label="Lọc theo hãng"></div></div>
+      </section>
+
+      <div class="result-bar"><h2 id="resultTitle">Tất cả games</h2><span id="resultCount"></span></div>
+      <div class="grid-games" id="gameGrid" aria-live="polite"></div>
+      <nav class="pagination" id="pager" aria-label="Phân trang"></nav>
+    </div>
+    <div style="height:clamp(56px,8vw,104px)"></div>
+  </main>
+  <div id="app-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/games.js"></script>
+</body>
+</html>

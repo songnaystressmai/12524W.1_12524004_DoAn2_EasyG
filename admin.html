@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Trang quản trị – EasyG</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#16161d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="admin" class="adm-body">
+  <div class="adm" id="adm">
+    <aside class="adm-side" id="admSide" aria-label="Menu quản trị">
+      <a class="logo logo--light" href="index.html" aria-label="EasyG – Về website">
+        <span class="logo-mark"><b>E</b></span><span class="logo-word">Easy<em>G</em></span>
+      </a>
+      <nav class="adm-nav" id="admNav"></nav>
+      <div class="adm-side__foot" id="admFoot"></div>
+    </aside>
+    <div class="adm-backdrop" id="admBackdrop"></div>
+
+    <div class="adm-main">
+      <header class="adm-top">
+        <button type="button" class="icon-btn burger" id="admBurger" aria-label="Mở menu quản trị"></button>
+        <h1 id="admTitle">Tổng quan</h1>
+        <div class="adm-who" id="admWho"></div>
+      </header>
+      <main class="adm-content" id="admContent" aria-live="polite"></main>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Giới thiệu – EasyG</title>
+  <meta name="description" content="Tìm hiểu về EasyG: website review và giới thiệu games xây dựng bằng HTML, CSS, JavaScript và LocalStorage.">
+  <meta name="theme-color" content="#e60012">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="about">
+  <div id="app-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__deco" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Trang chủ</a><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg><span>Giới thiệu</span></nav>
+        <h1>Về EasyG</h1>
+        <p>Chọn game không còn là việc đau đầu – mọi thông tin cần biết đều ở ngay đây.</p>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V40C120 0 240 0 360 24s240 48 360 32 240-56 360-48 240 40 360 56V80z"/></svg>
+    </section>
+
+    <section class="section" style="padding-top:clamp(24px,4vw,48px)">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Sứ mệnh</span>
+          <h2>Giúp bạn chọn game <mark class="swoosh">dễ như chơi</mark></h2>
+          <p>Số lượng games và hãng phát triển ngày càng nhiều, nhưng thông tin lại nằm rải rác ở nhiều nơi. EasyG gom chúng lại trong một website duy nhất: tìm kiếm nhanh, lọc theo hãng, xem cấu hình, hình ảnh thực tế trong game và đọc review từ cộng đồng.</p>
+          <p>Với các hãng nhỏ, EasyG là nơi để giới thiệu sản phẩm. Với người chơi, đó là nơi để tham khảo trước khi quyết định bỏ thời gian và tiền bạc cho một tựa game.</p>
+          <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div>
+        </div>
+        <div class="about-art reveal" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="word">EasyG</div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="sec-head reveal"><div><span class="eyebrow eyebrow--yellow">Cách dùng</span><h2>Ba bước để <mark>chọn đúng game</mark></h2></div></div>
+        <div class="steps">
+          <article class="step reveal"><h3>Tìm &amp; lọc</h3><p>Gõ tên game, chọn hãng hoặc thể loại để thu hẹp danh sách chỉ trong vài giây.</p></article>
+          <article class="step reveal" style="--d:100ms"><h3>Xem chi tiết</h3><p>Đọc mô tả, kiểm tra cấu hình, xem hình ảnh thực tế và điểm đánh giá của game.</p></article>
+          <article class="step reveal" style="--d:200ms"><h3>Đánh giá &amp; chia sẻ</h3><p>Đăng nhập, chấm điểm và viết review để giúp những người chơi khác.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow eyebrow--blue">Câu hỏi thường gặp</span>
+          <h2 style="margin-bottom:1.2rem">Bạn thắc mắc <mark class="swoosh">điều gì?</mark></h2>
+          <div class="faq">
+            <details open><summary>EasyG có bán game không?</summary><p>Không. EasyG chỉ là website giới thiệu và review games, không có chức năng đặt hàng hay thanh toán trực tuyến.</p></details>
+            <details><summary>Tôi cần đăng nhập để làm gì?</summary><p>Bạn có thể xem games, tìm kiếm và đọc review mà không cần tài khoản. Chỉ khi muốn viết đánh giá, bạn mới cần đăng nhập.</p></details>
+            <details><summary>Dữ liệu của tôi được lưu ở đâu?</summary><p>Toàn bộ dữ liệu được lưu bằng LocalStorage ngay trên trình duyệt của bạn, nên chỉ có hiệu lực trên thiết bị đang sử dụng.</p></details>
+            <details><summary>Điểm của một game được tính thế nào?</summary><p>Điểm EasyG là trung bình các điểm đánh giá của người dùng cho game đó, tự cập nhật mỗi khi có review mới.</p></details>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="demo-box">
+            <h3>Tài khoản dùng thử</h3>
+            <p style="margin-bottom:.8rem">Đồ án dùng dữ liệu giả lập. Bạn có thể đăng nhập bằng:</p>
+            <table><thead><tr><th>Vai trò</th><th>Tên đăng nhập</th><th>Mật khẩu</th></tr></thead>
+            <tbody><tr><td>Admin</td><td><code>admin</code></td><td><code>123</code></td></tr>
+            <tr><td>Người dùng</td><td><code>user</code></td><td><code>123</code></td></tr></tbody></table>
+            <a class="btn btn-primary btn-sm" style="margin-top:1rem" href="login.html">Đến trang đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+</body>
+</html>

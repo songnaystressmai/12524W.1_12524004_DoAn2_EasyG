@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nhà phát triển – EasyG</title>
+  <meta name="description" content="Danh sách các hãng phát triển, phát hành games và những tựa game tiêu biểu của từng hãng.">
+  <meta name="theme-color" content="#e60012">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e60012'/%3E%3Ctext x='32' y='47' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="developers">
+  <div id="app-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__deco" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Trang chủ</a><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg><span>Nhà phát triển</span></nav>
+        <h1>Nhà phát triển</h1>
+        <p>Gặp gỡ các hãng đứng sau những tựa game bạn yêu thích và xem toàn bộ games của từng hãng.</p>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V40C120 0 240 0 360 24s240 48 360 32 240-56 360-48 240 40 360 56V80z"/></svg>
+    </section>
+    <section class="section" style="padding-top:clamp(24px,4vw,48px)">
+      <div class="container">
+        <div class="grid-devs" id="devGrid"></div>
+        <div class="dev-detail" id="devDetail" tabindex="-1"></div>
+      </div>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/developers.js"></script>
+</body>
+</html>
